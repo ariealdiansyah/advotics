@@ -120,12 +120,12 @@
                 :key="i"
               >
                 <div class="col-3 q-mr-sm">
-                  <img src="~assets/Product.png" style="width: 85px; height: 90px" />
+                  <img src="~assets/Product.png" style="width: 80px; height: 90px" />
                 </div>
                 <div class="col q-pl-sm">
                   <div class="row">
                     <div class="col-12">
-                      <span class="text-black text-title-menu text-weight-bold">
+                      <span class="text-black text-desc-menu text-weight-bold">
                         Nama Product
                       </span>
                     </div>
@@ -165,7 +165,7 @@
                 <div class="col q-pl-sm">
                   <div class="row">
                     <div class="col-12">
-                      <span class="text-black text-title-menu text-weight-bold">
+                      <span class="text-black text-desc-menu text-weight-bold">
                         Nama Product
                       </span>
                     </div>
