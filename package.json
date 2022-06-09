@@ -8,9 +8,10 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
-    "build": "quasar build",
-    "start": "node server.js",
+    "serve": "quasar serve dist/pwa",
+    "dev": "quasar dev",
+    "build": "quasar build -m pwa",
+    "start": "node server.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
