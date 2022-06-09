@@ -100,10 +100,10 @@
         </div>
       </div>
       <div class="row q-pt-lg">
-        <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
           <Chart />
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 q-pr-sm q-pt-lg">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 q-pr-sm q-pt-lg">
           <q-card class="my-card" flat bordered>
             <q-card-section>
               <div class="row d-flex wrap">
@@ -143,7 +143,7 @@
             </q-card-section>
           </q-card>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 q-pr-sm q-pt-lg">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 q-pr-sm q-pt-lg">
           <q-card class="my-card" flat bordered>
             <q-card-section>
               <div class="row d-flex wrap">
