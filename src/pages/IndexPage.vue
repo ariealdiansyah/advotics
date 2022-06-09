@@ -49,7 +49,7 @@
               <q-separator vertical inset class="q-mx-lg" />
 
               <div class="column items-center">
-                <q-date v-model="date" :range="isRange" minimal />
+                <q-date v-model="date" :range="isRange" minimal :options="optionsFn" />
               </div>
             </div>
           </q-btn-dropdown>
@@ -199,7 +199,7 @@ export default {
   },
   data() {
     return {
-      isRange: false,
+      isRange: true,
       periodFrom: '',
       periodTo: '',
       menu: false,
@@ -237,8 +237,31 @@ export default {
       }
       return `Period ${this.periodFrom} - ${this.periodTo}`;
     },
+    max() {
+      return this.formatDate(
+        new Date(
+          new Date().getFullYear(),
+          new Date().getMonth(),
+          new Date().getDate() - 1,
+          0
+        )
+      );
+    },
   },
   methods: {
+    optionsFn(date) {
+      return (
+        date <=
+        this.formatDate(
+          new Date(
+            new Date().getFullYear(),
+            new Date().getMonth(),
+            new Date().getDate() - 1,
+            0
+          )
+        )
+      );
+    },
     formatDate(date) {
       let tgl;
       let bln;
@@ -256,6 +279,7 @@ export default {
       return `${year}/${bln}/${tgl}`;
     },
     getYesterday() {
+      this.isRange = false;
       const a = this.formatDate(
         new Date(
           new Date().getFullYear(),
@@ -264,7 +288,6 @@ export default {
           0
         )
       );
-      this.isRange = false;
       this.date = a;
     },
     getLastWeeks() {
